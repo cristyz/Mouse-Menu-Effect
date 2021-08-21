@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+#menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#menu-container .toggle {
+  height: 20px;
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+#menu-container .toggle div {
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+  border-radius: 30px;
+  position: absolute;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menu-container .toggle div:nth-child(1) {
+  top: 0%;
+}
+
+#menu-container .toggle div:nth-child(2) {
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#menu-container .toggle div:nth-child(3) {
+  bottom: 0;
+}
+
+#menu-container .toggle:hover div:nth-child(1) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#menu-container .toggle:hover div:nth-child(3) {
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+#menu-container .toggle-active div:nth-child(1) {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-225deg);
+          transform: translateY(-50%) rotate(-225deg);
+}
+
+#menu-container .toggle-active div:nth-child(2) {
+  left: -55px;
+  -webkit-transform: translateY(-50%) rotate(-220deg);
+          transform: translateY(-50%) rotate(-220deg);
+  opacity: 0;
+  -webkit-transition: 1.5s ease-in-out, opacity 3s;
+  transition: 1.5s ease-in-out, opacity 3s;
+}
+
+#menu-container .toggle-active div:nth-child(3) {
+  bottom: 50%;
+  -webkit-transform: translateY(50%) rotate(225deg);
+          transform: translateY(50%) rotate(225deg);
+}
+
+#menu-container #mouse-effect {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.1s, -webkit-transform 0.5s;
+  transition: 0.1s, -webkit-transform 0.5s;
+  transition: 0.1s, transform 0.5s;
+  transition: 0.1s, transform 0.5s, -webkit-transform 0.5s;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+#menu-container .menu {
+  list-style: none;
+  background-color: #111;
+  margin-top: 1rem;
+  height: 10px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  padding: .5rem 1rem;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+#menu-container .menu:hover {
+  height: 90px;
+}
+
+#menu-container .menu li {
+  font-size: 3rem;
+  color: #fff;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+#menu-container .menu li:hover ~ #mouse-effect {
+  -webkit-transform: scale(6);
+          transform: scale(6);
+}
+
+#menu-container .menu-active {
+  height: 370px;
+}
+
+#menu-container .menu-active:hover {
+  height: 370px;
+}
+/*# sourceMappingURL=main.css.map */
